@@ -1,9 +1,9 @@
-# 🛍️ Automated Web Scraping for Smart Shopping: Shirt Selection Project
+# Automated Web Scraping for Smart Shopping: Shirt Selection Project
 
-## 📌 Project Overview
+## Project Overview
 This project automates the process of searching for shirt products on e-commerce platforms using Web Scraping techniques. The main objective is to assist in purchasing decisions by automatically filtering data based on price, popularity, and ratings..
 
-## 📁 Repository Structure
+## Repository Structure
 ```
 ├── P1_Adhi-Rizqi.ipynb   # Main Notebook (scraping & analysis process)
 ├── datamatang.db         # Scraped database (SQLite)
@@ -11,13 +11,13 @@ This project automates the process of searching for shirt products on e-commerce
 └── README.md             # Project documentation
 ```
 
-## 📖 Background (Case Study)
+## Background (Case Study)
 The project was born from a personal need to purchase new shirts for multiple events in a single week. The challenge was to find the best shirts based on specific criteria:
 - `Category`: Most Popular.
 - `Budget`: Under IDR 500,000.
 - `Quality`: Highest user ratings.
 
-## 🛠️ Workflow & Technology
+## Workflow & Technology
 The project follows these key stages:
     - `Extraction`: Utilizing Selenium and BeautifulSoup to capture dynamic web data.
     - `Preparation`: Data cleaning and structuring using Pandas.
