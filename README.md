@@ -28,14 +28,14 @@ Tech Stack:
 - `Database`: SQLite3.
 
 ## Key Features
-- Automated Scraping: Extracts product names, prices, brands, ratings, and popularity labels.
-- Data Filtering: Automatically filters products that fit the user's budget and quality requirements.
-- Export Ready: Data is neatly stored in SQL format, ready for integration with other systems.
+- `Automated Scraping`: Extracts product names, prices, brands, ratings, and popularity labels.
+- `Data Filtering`: Automatically filters products that fit the user's budget and quality requirements.
+- `Export Ready`: Data is neatly stored in SQL format, ready for integration with other systems.
 
 ## Results & Recommendations
 Based on the program execution, the top recommendations found are:
-- Top Choice: EQ Zed solid RXD ss STREET (IDR 299,900 | Rating 4.9).
-- Alternatives: LUCAS REG LINEN LS SHIRT and ELLIOT OVZ LS (Price < IDR 500,000).
+- `Top Choice`: EQ Zed solid RXD ss STREET (IDR 299,900 | Rating 4.9).
+- `Alternatives`: LUCAS REG LINEN LS SHIRT and ELLIOT OVZ LS (Price < IDR 500,000).
 
 ## How to Use
 1. Clone this repository.
