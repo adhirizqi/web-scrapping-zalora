@@ -1,23 +1,48 @@
-# 🛍️ Web Scraping Zalora: Analisis Data Produk Fashion
+# 🛍️ Automated Web Scraping for Smart Shopping: Shirt Selection Project
 
-Repositori ini berisi proyek web scraping yang bertujuan untuk mengekstrak data produk dari situs e-commerce Zalora. Data yang diperoleh kemudian dianalisis untuk mendapatkan wawasan mengenai tren produk fashion.
+## 📌 Project Overview
+This project automates the process of searching for shirt products on e-commerce platforms using Web Scraping techniques. The main objective is to assist in purchasing decisions by automatically filtering data based on price, popularity, and ratings..
 
-## 📁 Struktur Proyek
+## 📁 Repository Structure
+```
+├── P1_Adhi-Rizqi.ipynb   # Main Notebook (scraping & analysis process)
+├── datamatang.db         # Scraped database (SQLite)
+├── datamatang.sql        # SQL Export file
+└── README.md             # Project documentation
+```
 
-- `P1_Adhi-Rizqi.ipynb`: Notebook Jupyter yang mendokumentasikan proses web scraping dan analisis data.
-- `DataFrame Zalora (Before).csv`: Data mentah yang diperoleh langsung dari proses scraping.
-- `DataFrame Zalora (After).csv`: Data yang telah dibersihkan dan siap untuk dianalisis.
-- `P1_Adhi-Rizqi (Before).sql`: Skrip SQL untuk membuat tabel dan mengimpor data mentah ke dalam database.
-- `P1_Adhi-Rizqi (After).sql`: Skrip SQL untuk membuat tabel dan mengimpor data yang telah dibersihkan ke dalam database.
+## 📖 Background (Case Study)
+The project was born from a personal need to purchase new shirts for multiple events in a single week. The challenge was to find the best shirts based on specific criteria:
+- `Category`: Most Popular.
+- `Budget`: Under IDR 500,000.
+- `Quality`: Highest user ratings.
 
-## 🔍 Fitur Utama
+## 🛠️ Workflow & Technology
+The project follows these key stages:
+    - `Extraction`: Utilizing Selenium and BeautifulSoup to capture dynamic web data.
+    - `Preparation`: Data cleaning and structuring using Pandas.
+    - `Storage`: Exporting the processed data into relational databases (SQLite) in both .db and .sql formats.
+Tech Stack:
+    - `Language`: Python
+    - `Libraries`: Selenium, BeautifulSoup4, Pandas, Requests.
+    - `Database`: SQLite3.
 
-- **Web Scraping**: Menggunakan Python untuk mengekstrak informasi produk seperti nama, harga, dan kategori dari situs Zalora.
-- **Pembersihan Data**: Menghilangkan duplikasi, menangani nilai yang hilang, dan standarisasi format data.
-- **Analisis Data**: Menggunakan SQL dan Python untuk menganalisis data produk dan mendapatkan wawasan bisnis.
+## Key Features
+    - Automated Scraping: Extracts product names, prices, brands, ratings, and popularity labels.
+    - Data Filtering: Automatically filters products that fit the user's budget and quality requirements.
+    - Export Ready: Data is neatly stored in SQL format, ready for integration with other systems.
 
-## 🛠️ Teknologi yang Digunakan
+## Results & Recommendations
+Based on the program execution, the top recommendations found are:
+    - Top Choice: EQ Zed solid RXD ss STREET (IDR 299,900 | Rating 4.9).
+    - Alternatives: LUCAS REG LINEN LS SHIRT and ELLIOT OVZ LS (Price < IDR 500,000).
 
-- Python
-- Jupyter Notebook
-- SQL
+## How to Use
+    1. Clone this repository.
+    2. Ensure you have the appropriate webdriver installed (e.g., ChromeDriver).
+    3. Install the required libraries:
+        `pip install selenium beautifulsoup4 pandas requests`
+    4. Run the P1_Adhi-Rizqi.ipynb notebook.
+
+## Contact
+For questions or collaboration, please contact Adhi Rizqi Alfaqih via [LinkedIn](https://www.linkedin.com/in/adhirizqi/) or GitHub.
