@@ -34,7 +34,8 @@ Tech Stack:
 
 ## Results & Recommendations
 ![Data yang didapat setelah dilakukan Scrapping](DataFrame_Before.png)
-![Data yang didapat setelah dilakukan Cleaning dan Pengolahan Data](DataFrame_AFter.png)
+![Data yang didapat setelah dilakukan Cleaning dan Pengolahan Data](DataFrame_After.png)
+
 Based on the program execution, the top recommendations found are:
 - `Top Choice`: EQ Zed solid RXD ss STREET (IDR 299,900 | Rating 4.9).
 - `Alternatives`: LUCAS REG LINEN LS SHIRT and ELLIOT OVZ LS (Price < IDR 500,000).
