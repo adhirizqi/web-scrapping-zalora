@@ -1,44 +1,107 @@
-# Automated Web Scraping for Smart Shopping: Shirt Selection Project
+# Zalora Men's Shirt Data Analysis
 
 ## Project Overview
-This project automates the process of searching for shirt products on e-commerce platforms using Web Scraping techniques. The main objective is to assist in purchasing decisions by automatically filtering data based on price, popularity, and ratings..
+This project analyzes men's shirt products available on the Zalora e-commerce platform using web scraping and data analysis techniques. The objective of this project is to explore product characteristics such as price distribution, customer ratings, and brand popularity, and to generate product recommendations based on specific criteria.
+
+The analysis combines **Python for data processing and Tableau for visualization**, demonstrating a typical workflow used in data analytics projects.
+
+## Problem Statement
+I needed to purchase several shirts for upcoming events within a week while keeping my spending within a limited budget. Therefore, data analysis was used to identify the most suitable products based on specific criteria.
+
+The product selection criteria are:
+
+- The product must be categorized as **"Most Popular"**
+- The product price must be below **IDR 500,000**
+- The product must have a **high customer rating**
+
+## Tools & Technologies
+The following tools and technologies were used in this project:
+
+- **Python** → Web scraping and data processing
+- **Selenium** → Browser automation for extracting product data
+- **BeautifulSoup** → HTML parsing and data extraction
+- **Pandas** → Data cleaning and analysis
+- **Matplotlib** / Seaborn → Data visualization during EDA
+- **Tableau** → Interactive dashboard creation
+
+## Project Workflow
+The project was conducted through the following stages:
+
+1. **Web Scraping**
+
+Product data was collected from the Zalora website using **Selenium and BeautifulSoup**.
+
+2. **Data Cleaning**
+
+The dataset was cleaned by handling missing values, correcting data types, and ensuring the data was suitable for analysis.
+
+3. **Exploratory Data Analysis (EDA)**
+
+EDA was conducted to explore and understand the dataset, including price distribution, customer ratings, and product popularity across different brands.
+
+4. **Data Filtering**
+
+The dataset was filtered based on predefined criteria to identify the most suitable product recommendations.
+
+5. **Data Visualization**
+
+An interactive dashboard was created using **Tableau** to visually present the analysis results.
+
+## Exploratory Data Analysis
+Several analyses were conducted to understand the dataset.
+
+- **Price Distribution**
+
+The price distribution analysis shows that most shirt products fall within the **IDR 300,000 to IDR 500,000** price range, indicating that the category is dominated by mid-range priced products.
+
+- **Product Rating Distribution**
+
+Most products have ratings above **4.0**, suggesting a generally high level of customer satisfaction for men's shirt products on the platform.
+
+- **Brand Popularity**
+
+Some brands have a higher proportion of products categorized as **"Most Popular"**, indicating stronger customer interest or visibility for those brands on the platform.
+
+## Filtering Results
+After the data cleaning and analysis process, product filtering was performed based on the following criteria:
+
+- Product price below **IDR 500,000**
+- Product categorized as **Most Popular**
+- Product with **high customer ratings**
+
+The analysis produced the **Top 10 recommended men's shirt products** based on the highest customer ratings.
+
+![Data yang didapat setelah dilakukan Cleaning dan Pengolahan Data](DataFrame_After.png)
+
+## Dashboard Preview
+![Dashboard Preview](Dashboard.png)
+
+## Tableau Dashboard
+The interactive dashboard can be explored here:
+
+**Tableau Public Link**
+[Dashboard](https://public.tableau.com/views/AnalisisProdukKemejaPriaZalora/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
+## Conclusion
+Based on the analysis, most men's shirt products on Zalora fall within the mid-price category and generally receive high customer ratings.
+
+Additionally, certain brands appear more frequently in the "Most Popular" category, suggesting stronger customer interest in those brands.
+
+This project demonstrates how web scraping, data cleaning, exploratory data analysis, and data visualization can be applied to support data-driven decision making when selecting products that meet specific user needs.
 
 ## Repository Structure
 ```
-├── P1_Adhi-Rizqi.ipynb   # Main Notebook (scraping & analysis process)
-├── datamatang.db         # Scraped database (SQLite)
-├── datamatang.sql        # SQL Export file
-└── README.md             # Project documentation
+web-scrapping-zalora
+├── P1_Adhi-Rizqi.ipynb                       # Main Notebook (scraping & analysis process)
+├── DataFrame Zalora (Before).csv             # Dataset before filtering
+├── DataFrame Zalora (After).csv              # Dataset after filtering
+├── DataFrame Zalora (Before).sql             # SQL Export file before filtering
+├── DataFrame Zalora (After).sql              # SQL Export file before filtering
+├── rekomendasi.db                            # Scraped database (SQLite)
+├── Analisis Produk Kemeja Pria Zalora.twb    # Tableau File
+├── Dashboard.png                             # Dashboard Preview File
+└── README.md                                 # Project documentation
 ```
-
-## Background (Case Study)
-The project was born from a personal need to purchase new shirts for multiple events in a single week. The challenge was to find the best shirts based on specific criteria:
-- `Category`: Most Popular.
-- `Budget`: Under IDR 500,000.
-- `Quality`: Highest user ratings.
-
-## Workflow & Technology
-The project follows these key stages:
-- `Extraction`: Utilizing Selenium and BeautifulSoup to capture dynamic web data.
-- `Preparation`: Data cleaning and structuring using Pandas.
-- `Storage`: Exporting the processed data into relational databases (SQLite) in both .db and .sql formats.
-Tech Stack:
-- `Language`: Python
-- `Libraries`: Selenium, BeautifulSoup4, Pandas, Requests.
-- `Database`: SQLite3.
-
-## Key Features
-- `Automated Scraping`: Extracts product names, prices, brands, ratings, and popularity labels.
-- `Data Filtering`: Automatically filters products that fit the user's budget and quality requirements.
-- `Export Ready`: Data is neatly stored in SQL format, ready for integration with other systems.
-
-## Results & Recommendations
-![Data yang didapat setelah dilakukan Scrapping](DataFrame_Before.png)
-![Data yang didapat setelah dilakukan Cleaning dan Pengolahan Data](DataFrame_After.png)
-
-Based on the program execution, the top recommendations found are:
-- `Top Choice`: EQ Zed solid RXD ss STREET (IDR 299,900 | Rating 4.9).
-- `Alternatives`: LUCAS REG LINEN LS SHIRT and ELLIOT OVZ LS (Price < IDR 500,000).
 
 ## How to Use
 1. Clone this repository.
