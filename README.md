@@ -93,9 +93,9 @@ This project demonstrates how web scraping, data cleaning, exploratory data anal
 ```
 web-scrapping-zalora
 ├── P1_Adhi-Rizqi.ipynb                                  # Main Notebook (scraping & analysis process)
-├── Zalora_DataFrame_Cleaned.csv                        # Dataset has cleaned
+├── Zalora_DataFrame_Cleaned.csv                         # Dataset has been cleaned
 ├── Zalora_DataFrame_Recommendation.csv                  # Dataset after filtering
-├── DataFrame Zalora Cleaned.sql                         # SQL Export file has cleaned
+├── DataFrame Zalora Cleaned.sql                         # SQL Export file has been cleaned
 ├── DataFrame Zalora Recommendation.sql                  # SQL Export file after filtering
 ├── recommendation.db                                    # Scraped database (SQLite)
 ├── Analysis of Product Men's Shirts from Zalora.twb     # Tableau File
