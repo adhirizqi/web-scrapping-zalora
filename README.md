@@ -71,7 +71,7 @@ After the data cleaning and analysis process, product filtering was performed ba
 
 The analysis produced the **Top 10 recommended men's shirt products** based on the highest customer ratings.
 
-![Data yang didapat setelah dilakukan Cleaning dan Pengolahan Data](Zalora_DataFrame_Recommendation.png)
+![Data yang didapat setelah dilakukan Cleaning dan Pengolahan Data](Zalora_DataFrame_Recommendation.jpg)
 
 ## Dashboard Preview
 ![Dashboard Preview](Dashboard.jpg)
