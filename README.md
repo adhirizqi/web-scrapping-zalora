@@ -71,16 +71,16 @@ After the data cleaning and analysis process, product filtering was performed ba
 
 The analysis produced the **Top 10 recommended men's shirt products** based on the highest customer ratings.
 
-![Data yang didapat setelah dilakukan Cleaning dan Pengolahan Data](DataFrame_After.png)
+![Data yang didapat setelah dilakukan Cleaning dan Pengolahan Data](Zalora_DataFrame_Recommendation.png)
 
 ## Dashboard Preview
-![Dashboard Preview](Dashboard.png)
+![Dashboard Preview](Dashboard.jpg)
 
 ## Tableau Dashboard
 The interactive dashboard can be explored here:
 
 **Tableau Public Link**
-[Dashboard](https://public.tableau.com/views/AnalisisProdukKemejaPriaZalora/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+[Dashboard](https://public.tableau.com/views/AnalysisofProductMensShirtsfromZalora/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ## Conclusion
 Based on the analysis, most men's shirt products on Zalora fall within the mid-price category and generally receive high customer ratings.
@@ -92,15 +92,15 @@ This project demonstrates how web scraping, data cleaning, exploratory data anal
 ## Repository Structure
 ```
 web-scrapping-zalora
-├── P1_Adhi-Rizqi.ipynb                       # Main Notebook (scraping & analysis process)
-├── DataFrame Zalora (Before).csv             # Dataset before filtering
-├── DataFrame Zalora (After).csv              # Dataset after filtering
-├── DataFrame Zalora (Before).sql             # SQL Export file before filtering
-├── DataFrame Zalora (After).sql              # SQL Export file before filtering
-├── rekomendasi.db                            # Scraped database (SQLite)
-├── Analisis Produk Kemeja Pria Zalora.twb    # Tableau File
-├── Dashboard.png                             # Dashboard Preview File
-└── README.md                                 # Project documentation
+├── P1_Adhi-Rizqi.ipynb                                  # Main Notebook (scraping & analysis process)
+├── Zalora_DataFrame_Cleaned.csv                        # Dataset has cleaned
+├── Zalora_DataFrame_Recommendation.csv                  # Dataset after filtering
+├── DataFrame Zalora Cleaned.sql                         # SQL Export file has cleaned
+├── DataFrame Zalora Recommendation.sql                  # SQL Export file after filtering
+├── recommendation.db                                    # Scraped database (SQLite)
+├── Analysis of Product Men's Shirts from Zalora.twb     # Tableau File
+├── Dashboard.jpg                                        # Dashboard Preview File
+└── README.md                                            # Project documentation
 ```
 
 ## How to Use
