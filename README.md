@@ -40,8 +40,8 @@ I need several new shirts for various events in the coming week, but I have a li
 │   ├── raw/
 │   │   └── dataframe.csv                    # Raw scraped data
 │   └── processed/
-│       ├── zalora_cleaned.csv               # Cleaned dataset
-│       └── zalora_recommendation.csv        # Final filtered recommendations
+│       ├── dataframe_cleaned.csv               # Cleaned dataset
+│       └── dataframe_recommendation.csv        # Final filtered recommendations
 └── README.md
 ```
 
@@ -82,8 +82,7 @@ I need several new shirts for various events in the coming week, but I have a li
 ## Dashboard Preview
 
 ## Tableau Dashboard
-The interactive dashboard can be explored here:
-![Dashboard Preview](<div class='tableauPlaceholder' id='viz1783413052071' style='position: relative'><noscript><a href='#'><img alt='Analysis of Product Men&#39;s Shirts from Zalora ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnalysisofProductMensShirtsfromZalora&#47;AnalysisofProductMensShirtsfromZalora&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='AnalysisofProductMensShirtsfromZalora&#47;AnalysisofProductMensShirtsfromZalora' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnalysisofProductMensShirtsfromZalora&#47;AnalysisofProductMensShirtsfromZalora&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1783413052071');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1827px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>)
+<div class='tableauPlaceholder' id='viz1783413052071' style='position: relative'><noscript><a href='#'><img alt='Analysis of Product Men&#39;s Shirts from Zalora ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnalysisofProductMensShirtsfromZalora&#47;AnalysisofProductMensShirtsfromZalora&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='AnalysisofProductMensShirtsfromZalora&#47;AnalysisofProductMensShirtsfromZalora' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnalysisofProductMensShirtsfromZalora&#47;AnalysisofProductMensShirtsfromZalora&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>
 
 
 **Tableau Public Link**
@@ -111,5 +110,7 @@ jupyter notebook 2_analysis.ipynb
 ## 📬 Contact
 
 **Adhi Rizqi Alfaqih**
+
 Data Analyst | BI Analyst
+
 *[Email](adhirizqi22@gmailcom), [LinkedIn](https://www.linkedin.com/in/adhirizqi/), and [Portfolio](https://app.notion.com/p/Adhi-s-Portfolio-Data-a4f6b844a49183a797d9810d39429752?source=copy_link)*
