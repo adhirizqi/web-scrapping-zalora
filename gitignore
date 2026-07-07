@@ -1,0 +1,20 @@
+# Jupyter
+.ipynb_checkpoints/
+
+# Tableau lock/temp files
+*.twbr
+*.twbx.lck
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/

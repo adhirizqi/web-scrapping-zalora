@@ -34,14 +34,11 @@ I need several new shirts for various events in the coming week, but I have a li
 ## Project Structure
 
 ```
-├── 01_scraping.ipynb          # Web scraping pipeline (Selenium + BeautifulSoup)
+├── 1_scraping.ipynb          # Web scraping pipeline (Selenium + BeautifulSoup)
 ├── 2_analysis.ipynb           # Data cleaning, EDA, and product filtering
-├── data/
-│   ├── raw/
-│   │   └── dataframe.csv                    # Raw scraped data
-│   └── processed/
-│       ├── dataframe_cleaned.csv               # Cleaned dataset
-│       └── dataframe_recommendation.csv        # Final filtered recommendations
+├── dataframe.csv                    # Raw scraped data
+├── dataframe_cleaned.csv               # Cleaned dataset
+├── dataframe_recommendation.csv        # Final filtered recommendations
 └── README.md
 ```
 
@@ -49,7 +46,7 @@ I need several new shirts for various events in the coming week, but I have a li
 
 ## Workflow
 
-1. **Web Scraping** (`01_scraping.ipynb`) — collect product name, price, store/brand, rating, and "Most Popular" label from the first 10 pages of Zalora's men's shirt sale category.
+1. **Web Scraping** (`1_scraping.ipynb`) — collect product name, price, store/brand, rating, and "Most Popular" label from the first 10 pages of Zalora's men's shirt sale category.
 2. **Data Cleaning** (`2_analysis.ipynb`, Part 1):
    - Removed the redundant index column and duplicate rows (390 → 315 unique products)
    - Parsed `Price` from currency strings (e.g. `"Rp 299.900"`) into integers
@@ -59,6 +56,15 @@ I need several new shirts for various events in the coming week, but I have a li
 4. **Filtering & Recommendation** (Part 3) — applied the three selection criteria to produce a ranked shortlist of top picks.
 
 ---
+
+## Data Unclean
+
+![dataframe](dataframe.png)
+
+## Data Clean
+
+![dataframe_clean](dataframe_cleaned.png)
+![dataframe_recommendations](dataframe_recommendations.png)
 
 ## Key Insights
 
@@ -81,8 +87,8 @@ I need several new shirts for various events in the coming week, but I have a li
 
 ## Dashboard Preview
 
-## Tableau Dashboard
-<div class='tableauPlaceholder' id='viz1783413052071' style='position: relative'><noscript><a href='#'><img alt='Analysis of Product Men&#39;s Shirts from Zalora ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnalysisofProductMensShirtsfromZalora&#47;AnalysisofProductMensShirtsfromZalora&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='AnalysisofProductMensShirtsfromZalora&#47;AnalysisofProductMensShirtsfromZalora' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnalysisofProductMensShirtsfromZalora&#47;AnalysisofProductMensShirtsfromZalora&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>
+**Tableau Dashboard**
+![Dashboard](dashboard.png)
 
 
 **Tableau Public Link**
@@ -90,27 +96,27 @@ I need several new shirts for various events in the coming week, but I have a li
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/<repo-name>.git
+git clone https://github.com/adhirizqi/web-scrapping-zalora.git
 cd <repo-name>
 
 # Install dependencies
 pip install pandas matplotlib seaborn beautifulsoup4 selenium sqlalchemy
 
 # Run the notebooks in order
-jupyter notebook 01_scraping.ipynb
+jupyter notebook 1_scraping.ipynb
 jupyter notebook 2_analysis.ipynb
 ```
 
 ---
 
-## 📬 Contact
+## Contact
 
 **Adhi Rizqi Alfaqih**
 
 Data Analyst | BI Analyst
 
-*[Email](adhirizqi22@gmailcom), [LinkedIn](https://www.linkedin.com/in/adhirizqi/), and [Portfolio](https://app.notion.com/p/Adhi-s-Portfolio-Data-a4f6b844a49183a797d9810d39429752?source=copy_link)*
+*[Email](adhirizqi22@gmail.com) · [LinkedIn](https://www.linkedin.com/in/adhirizqi/) · [Portfolio](https://app.notion.com/p/Adhi-s-Portfolio-Data-a4f6b844a49183a797d9810d39429752?source=copy_link)*
