@@ -1,114 +1,115 @@
-# Zalora Men's Shirt Data Analysis
+# Zalora Men's Shirt — Web Scraping, Data Cleaning & Analysis
 
-## Project Overview
-This project analyzes men's shirt products available on the Zalora e-commerce platform using web scraping and data analysis techniques. The objective of this project is to explore product characteristics such as price distribution, customer ratings, and brand popularity, and to generate product recommendations based on specific criteria.
+**Author:** Adhi Rizqi Alfaqih
 
-The analysis combines **Python for data processing and Tableau for visualization**, demonstrating a typical workflow used in data analytics projects.
+A data analytics project that scrapes men's shirt product data from Zalora, cleans and explores it, and generates a shortlist of purchase recommendations for a budget-constrained shopper — end to end, from raw HTML to an interactive dashboard.
+
+---
 
 ## Problem Statement
-I needed to purchase several shirts for upcoming events within a week while keeping my spending within a limited budget. Therefore, data analysis was used to identify the most suitable products based on specific criteria.
 
-The product selection criteria are:
+I need several new shirts for various events in the coming week, but I have a limited budget.
 
-- The product must be categorized as **"Most Popular"**
-- The product price must be below **IDR 500,000**
-- The product must have a **high customer rating**
+**Analysis goal:** identify men's shirt products on Zalora that offer the best combination of affordable price, product popularity, and high customer rating.
 
-## Tools & Technologies
-The following tools and technologies were used in this project:
+**Selection criteria:**
+- Product is labeled **"Most Popular"**
+- Product price is **below IDR 500,000**
+- Product has a **high, genuine customer rating**
 
-- **Python** → Web scraping and data processing
-- **Selenium** → Browser automation for extracting product data
-- **BeautifulSoup** → HTML parsing and data extraction
-- **Pandas** → Data cleaning and analysis
-- **Matplotlib** / Seaborn → Data visualization during EDA
-- **Tableau** → Interactive dashboard creation
+---
 
-## Project Workflow
-The project was conducted through the following stages:
+## Tech Stack
 
-1. **Web Scraping**
+| Purpose | Tools |
+|---|---|
+| Web scraping | Selenium, BeautifulSoup |
+| Data manipulation | Pandas |
+| Visualization | Matplotlib, Seaborn |
+| Storage | SQLAlchemy (SQLite) |
+| Dashboard | Tableau |
 
-Product data was collected from the Zalora website using **Selenium and BeautifulSoup**.
+---
 
-2. **Data Cleaning**
+## Project Structure
 
-The dataset was cleaned by handling missing values, correcting data types, and ensuring the data was suitable for analysis.
+```
+├── 01_scraping.ipynb          # Web scraping pipeline (Selenium + BeautifulSoup)
+├── 2_analysis.ipynb           # Data cleaning, EDA, and product filtering
+├── data/
+│   ├── raw/
+│   │   └── dataframe.csv                    # Raw scraped data
+│   └── processed/
+│       ├── zalora_cleaned.csv               # Cleaned dataset
+│       └── zalora_recommendation.csv        # Final filtered recommendations
+└── README.md
+```
 
-3. **Exploratory Data Analysis (EDA)**
+---
 
-EDA was conducted to explore and understand the dataset, including price distribution, customer ratings, and product popularity across different brands.
+## Workflow
 
-4. **Data Filtering**
+1. **Web Scraping** (`01_scraping.ipynb`) — collect product name, price, store/brand, rating, and "Most Popular" label from the first 10 pages of Zalora's men's shirt sale category.
+2. **Data Cleaning** (`2_analysis.ipynb`, Part 1):
+   - Removed the redundant index column and duplicate rows (390 → 315 unique products)
+   - Parsed `Price` from currency strings (e.g. `"Rp 299.900"`) into integers
+   - Converted `Rating` to numeric, flagging unrated products separately (`has_rating`) rather than discarding them
+   - Standardized `Most Popular` into a binary flag (1/0)
+3. **Exploratory Data Analysis** (Part 2) — price distribution, rating distribution, brand concentration, and the relationship between price and rating.
+4. **Filtering & Recommendation** (Part 3) — applied the three selection criteria to produce a ranked shortlist of top picks.
 
-The dataset was filtered based on predefined criteria to identify the most suitable product recommendations.
+---
 
-5. **Data Visualization**
+## Key Insights
 
-An interactive dashboard was created using **Tableau** to visually present the analysis results.
+- **Price and rating are essentially uncorrelated** (Pearson r ≈ 0.06) — a lower price does not mean a lower-rated product. Budget shoppers aren't sacrificing quality.
+- **True customer satisfaction is high**: 13% of products (41 of 315) have no reviews yet and were flagged separately rather than treated as "0-rated." Among genuinely rated products, the average rating is **4.84 / 5**.
+- **"Most Popular" is a selective label**, applied to only ~29.5% of listings — making it a meaningful filter rather than marketing noise.
+- **Marks & Spencer dominates the catalog** (72 of 315 listings, and 45 of 93 "Most Popular" products) — a useful caveat when interpreting any brand-level conclusion.
+- After applying all three filtering criteria, **32 products** qualified as strong recommendations, spanning a genuinely diverse mix of brands — not dominated by any single seller.
 
-## Exploratory Data Analysis
-Several analyses were conducted to understand the dataset.
+---
 
-- **Price Distribution**
+## Limitations
 
-The price distribution analysis shows that most shirt products fall within the **IDR 300,000 to IDR 500,000** price range, indicating that the category is dominated by mid-range priced products.
+- Data was collected only from the first 10 pages of Zalora's men's shirt sale category, so it does not represent the full catalog.
+- Prices, ratings, and "Most Popular" labels are dynamic and may have changed since data collection.
+- Products without customer reviews cannot be included in rating-based filtering.
+- The scraper depends on Zalora's current HTML structure, which may change and require script updates.
 
-- **Product Rating Distribution**
-
-Most products have ratings above **4.0**, suggesting a generally high level of customer satisfaction for men's shirt products on the platform.
-
-- **Brand Popularity**
-
-Some brands have a higher proportion of products categorized as **"Most Popular"**, indicating stronger customer interest or visibility for those brands on the platform.
-
-## Filtering Results
-After the data cleaning and analysis process, product filtering was performed based on the following criteria:
-
-- Product price below **IDR 500,000**
-- Product categorized as **Most Popular**
-- Product with **high customer ratings**
-
-The analysis produced the **Top 10 recommended men's shirt products** based on the highest customer ratings.
-
-![Data yang didapat setelah dilakukan Cleaning dan Pengolahan Data](Zalora_DataFrame_Recommendation.jpg)
+---
 
 ## Dashboard Preview
-![Dashboard Preview](Dashboard.jpg)
 
 ## Tableau Dashboard
 The interactive dashboard can be explored here:
+![Dashboard Preview](<div class='tableauPlaceholder' id='viz1783413052071' style='position: relative'><noscript><a href='#'><img alt='Analysis of Product Men&#39;s Shirts from Zalora ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnalysisofProductMensShirtsfromZalora&#47;AnalysisofProductMensShirtsfromZalora&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='AnalysisofProductMensShirtsfromZalora&#47;AnalysisofProductMensShirtsfromZalora' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnalysisofProductMensShirtsfromZalora&#47;AnalysisofProductMensShirtsfromZalora&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1783413052071');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1827px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>)
+
 
 **Tableau Public Link**
-[Dashboard](https://public.tableau.com/views/AnalysisofProductMensShirtsfromZalora/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+[Dashboard](https://public.tableau.com/views/AnalysisofProductMensShirtsfromZalora/AnalysisofProductMensShirtsfromZalora?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
-## Conclusion
-Based on the analysis, most men's shirt products on Zalora fall within the mid-price category and generally receive high customer ratings.
+---
 
-Additionally, certain brands appear more frequently in the "Most Popular" category, suggesting stronger customer interest in those brands.
+## ▶️ How to Run
 
-This project demonstrates how web scraping, data cleaning, exploratory data analysis, and data visualization can be applied to support data-driven decision making when selecting products that meet specific user needs.
+```bash
+# Clone the repository
+git clone https://github.com/<your-username>/<repo-name>.git
+cd <repo-name>
 
-## Repository Structure
-```
-web-scrapping-zalora
-├── P1_Adhi-Rizqi.ipynb                                  # Main Notebook (scraping & analysis process)
-├── Zalora_DataFrame_Cleaned.csv                         # Dataset has been cleaned
-├── Zalora_DataFrame_Recommendation.csv                  # Dataset after filtering
-├── DataFrame Zalora Cleaned.sql                         # SQL Export file has been cleaned
-├── DataFrame Zalora Recommendation.sql                  # SQL Export file after filtering
-├── recommendation.db                                    # Scraped database (SQLite)
-├── Analysis of Product Men's Shirts from Zalora.twb     # Tableau File
-├── Dashboard.jpg                                        # Dashboard Preview File
-└── README.md                                            # Project documentation
+# Install dependencies
+pip install pandas matplotlib seaborn beautifulsoup4 selenium sqlalchemy
+
+# Run the notebooks in order
+jupyter notebook 01_scraping.ipynb
+jupyter notebook 2_analysis.ipynb
 ```
 
-## How to Use
-1. Clone this repository.
-2. Ensure you have the appropriate webdriver installed (e.g., ChromeDriver).
-3. Install the required libraries:
-   `pip install selenium beautifulsoup4 pandas requests`
-4. Run the `P1_Adhi-Rizqi.ipynb notebook`.
+---
 
-## Contact
-For questions or collaboration, please contact Adhi Rizqi Alfaqih via [LinkedIn](https://www.linkedin.com/in/adhirizqi/) or GitHub.
+## 📬 Contact
+
+**Adhi Rizqi Alfaqih**
+Data Analyst | BI Analyst
+*[Email](adhirizqi22@gmailcom), [LinkedIn](https://www.linkedin.com/in/adhirizqi/), and [Portfolio](https://app.notion.com/p/Adhi-s-Portfolio-Data-a4f6b844a49183a797d9810d39429752?source=copy_link)*
